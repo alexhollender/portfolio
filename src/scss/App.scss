@@ -1,0 +1,38 @@
+#container {
+  display: flex;
+
+  section {
+    overflow-y: scroll;
+
+    .container-left {
+      max-width: 400px;
+      margin: 100px 50px 50px 175px;
+      transition: all 100ms ease;
+
+      p#intro {
+        margin: 0 0 50px 15px;
+        font-family: serif;
+        font-size: 22px;
+      }
+    }
+
+    &#right {
+      border-left: 1px dotted #cdcdcd;
+
+      .container-right {
+        flex: 1;
+        margin: 50px 50px 0 50px;
+      }
+    }
+
+  }
+
+  &.project {
+    height: 100vh;
+    overflow: hidden;
+
+    .container-left {
+      margin: 50px 30px;
+    }
+  }
+}
