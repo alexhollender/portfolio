@@ -6,7 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import App from './components/App';
-import ProjectContainer from './components/ProjectContainer';
+import Project from './components/Project';
 import './scss/index.scss';
 
 ReactDOM.render(
@@ -14,7 +14,7 @@ ReactDOM.render(
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path=":projectId" element={<ProjectContainer project="two" />} />
+            <Route path=":projectId" element={<Project />} />
           </Route>
         </Routes>
     </BrowserRouter>

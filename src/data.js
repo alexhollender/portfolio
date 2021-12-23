@@ -1,66 +1,53 @@
-import WikiDip from "./components/projects/WikiDip";
-import CookingTimers from "./components/projects/CookingTimers";
+import WikiDip from './components/projects/WikiDip';
+import CookingTimers from './components/projects/CookingTimers';
+import Onia from './components/projects/Onia';
+import AltSchool from './components/projects/AltSchool';
 
 let projects = [
   {
     path: 'wiki-dip',
     component: WikiDip,
-    name: 'Wikipedia: desktop improvements project',
-    description: 'various improvements to the desktop interface of Wikipedia',
-    content: '<h1>Desktop improvements project</h1>'
+    name: 'Wikipedia desktop improvements project',
+    description: 'various improvements to the desktop interface of Wikipedia'
   },
   {
     path: 'cooking-timers',
     component: CookingTimers,
     name: 'Cooking timers',
-    description: 'a basic timer tool, built with react.js',
-    content: '<h1>Cooking timers</h1>'
+    description: 'a basic timer tool, built with react.js'
   },
   {
     path: 'wiki-kids',
     component: 'WikiKids',
     name: 'Wikipedia for kids',
-    description: 'explorations of making Wikipedia more accessible for younger learners',
-    content: '<h1>Wikipedia for kids</h1>'
+    description: 'explorations of making Wikipedia more accessible for younger learners'
   },
   {
     path: 'dispose',
     component: 'Dispose',
     name: 'DISPOSE',
-    description: 'an art project / online magazine involving disposable cameras',
-    content: '<h1>Dispose</h1>'
+    description: 'an art project / online magazine involving disposable cameras'
   },
   {
     path: 'createbuilddestroy',
     component: 'CreateBuildDestroy',
     name: 'Create Build Destroy',
-    description: 'a clothing company i ran with a few friends in college',
-    content: '<h1>Create Build Destroy</h1>'
+    description: 'a clothing company i ran with a few friends in college'
   },
   {
     path: 'altschool',
-    component: 'AltSchool',
+    component: AltSchool,
     name: 'AltSchool',
-    description: 'an education technology startup i worked for in san francisco',
-    content: '<h1>AltSchool</h1>'
+    description: 'an education technology startup i worked for in san francisco'
   },
   {
     path: 'onia',
-    component: 'Onia',
+    component: Onia,
     name: 'Onia',
-    description: 'my first job out of college, designer for a clothing company in nyc',
-    content: '<h1>Onia</h1>'
+    description: 'my first job out of college, designer for a clothing company in nyc'
   }
 ];
 
 export function getProjects() {
   return projects;
-}
-
-export function pathComponentObject() {
-  var obj = {};
-  projects.forEach(element => {
-    obj[element.path] = element.component;
-  });
-  return obj;
 }

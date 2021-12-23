@@ -1,8 +1,11 @@
+import { importAll } from '../../functions.js';
+
 const WikiDip = () => {
 
   return (
     <>
-    <p>wiki dip</p>
+    <h1>Wikipedia desktop improvements project</h1>
+    <p className="body">Text goes here</p>
     </>
   )
 }

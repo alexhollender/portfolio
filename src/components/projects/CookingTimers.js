@@ -1,8 +1,11 @@
+import { importAll } from '../../functions.js';
+
 const CookingTimers = () => {
 
   return (
     <>
-    <p>cooking timers</p>
+    <h1>Cooking timers</h1>
+    <p className="body">Text goes here</p>
     </>
   )
 }

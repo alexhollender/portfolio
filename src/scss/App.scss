@@ -1,27 +1,39 @@
+@import './variables.scss';
+
 #container {
   display: flex;
 
   section {
-    overflow-y: scroll;
-
-    .container-left {
-      max-width: 400px;
-      margin: 100px 50px 50px 175px;
+    &#left {
+      width: 50%;
       transition: all 100ms ease;
 
-      p#intro {
-        margin: 0 0 50px 15px;
-        font-family: serif;
-        font-size: 22px;
+      .container-left {
+        width: 420px;
+        margin: 150px auto 50px auto;
+        transition: all 100ms ease;
+
+        #intro {
+          margin: 0 0 50px 15px;
+          font-family: serif;
+          font-size: $font-22;
+        }
       }
     }
 
-    &#right {
-      border-left: 1px dotted #cdcdcd;
 
+    &#right {
+      width: 50%;
+      position: sticky;
+      height: fit-content;
+      top: 0;
       .container-right {
-        flex: 1;
-        margin: 50px 50px 0 50px;
+        #homeImage {
+          width: 75%;
+          max-width: 600px;
+          margin: 25px 25px 0 0;
+          float: right;
+        }
       }
     }
 
@@ -31,8 +43,27 @@
     height: 100vh;
     overflow: hidden;
 
-    .container-left {
-      margin: 50px 30px;
+    section {
+      overflow-y: scroll;
+
+      &#left {
+        width: 480px;
+        .container-left {
+          margin: 50px auto 50px auto;
+        }
+      }
+
+      &#right {
+        flex: 1;
+        height: auto;
+        position: initial;
+        border-left: 1px dotted #cdcdcd;
+
+        .container-right {
+          flex: 1;
+          margin: 50px 50px 0 50px;
+        }
+      }
     }
   }
 }

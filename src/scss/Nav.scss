@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 nav {
   a {
     display: block;
@@ -15,12 +17,11 @@ nav {
     }
 
     h3 {
-      font-size: 18px;
       font-family: sans-serif;
       margin-bottom: 4px;
     }
     p {
-      font-size: 17px;
+      font-size: $font-17;
       font-family: serif;
     }
 
