@@ -10,7 +10,6 @@
 
 # images
 /src/img
-*.jpg
 
 # production
 /build

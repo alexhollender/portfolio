@@ -1,3 +1,4 @@
+import Header from "./Header";
 import Nav from "./Nav";
 import { Outlet, useLocation } from "react-router-dom";
 import '../scss/App.scss';
@@ -10,6 +11,10 @@ const App = () => {
   var length = location.pathname.length;
 
   return (
+    <>
+    {length === 1 &&
+      <Header />
+    }
     <div id="container" className={length > 1 ? "project" : "noProject"}>
       <section id="left">
         <div className="container-left">
@@ -28,6 +33,7 @@ const App = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

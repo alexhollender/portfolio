@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+@font-face {
+  font-family: 'vcr';
+  src: url('../fonts/vcr.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/vcr.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/vcr.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/vcr.svg#bloomsregular') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.75;
+  margin: 10px 15px 0 15px;
+  div {
+    p {
+      font-family: vcr;
+      font-size: $font-14;
+    }
+
+  }
+}
