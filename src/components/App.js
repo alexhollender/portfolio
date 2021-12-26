@@ -18,7 +18,7 @@ const App = () => {
     <div id="container" className={length > 1 ? "project" : "noProject"}>
       <section id="left">
         <div className="container-left">
-          <p id="intro">hey, i'm alex, and these are some things i've worked on as a designer and developer:</p>
+          <p id="intro">hey, i'm alex...these are some things i've worked on as a designer and developer:</p>
           <Nav />
         </div>
       </section>

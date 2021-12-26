@@ -1,5 +1,6 @@
 import WikiDip from './components/projects/WikiDip';
 import CookingTimers from './components/projects/CookingTimers';
+import Dispose from './components/projects/Dispose';
 import Onia from './components/projects/Onia';
 import AltSchool from './components/projects/AltSchool';
 
@@ -24,7 +25,7 @@ let projects = [
   },
   {
     path: 'dispose',
-    component: 'Dispose',
+    component: Dispose,
     name: 'DISPOSE',
     description: 'an art project / online magazine involving disposable cameras'
   },
@@ -45,6 +46,12 @@ let projects = [
     component: Onia,
     name: 'Onia',
     description: 'my first job out of college, designer for a clothing company in nyc'
+  },
+  {
+    path: 'misc',
+    component: '',
+    name: 'Misc.',
+    description: 'a bunch of other bits and pieces'
   }
 ];
 

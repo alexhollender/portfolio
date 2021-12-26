@@ -17,9 +17,9 @@ const Project = () => {
 
   return (
     <>
-    <Link to="/">close</Link>
+    <Link to="/" id="closeProject"></Link>
     {/* renders project component based on URL path */}
-    <div id="projectContainer">
+    <div id="projectContainer" className={path}>
       <RenderDynamicProject />
     </div>
     </>

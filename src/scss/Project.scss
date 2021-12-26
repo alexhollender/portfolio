@@ -1,5 +1,17 @@
 @import './variables.scss';
 
+#closeProject {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  background-image: url('../img/close.svg');
+  background-size: cover;
+
+  &:hover { border-bottom: 1px solid black; }
+}
+
 #projectContainer {
   h1 {
     font-family: sans-serif;
@@ -8,5 +20,10 @@
   img {
     max-width: 90%;
     margin: 30px 0;
+  }
+
+  &.dispose {
+    img { margin: 50px 0; }
+    video { border: 1px solid lightgray; }
   }
 }
