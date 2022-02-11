@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-#container {
+#page {
   display: flex;
 
   section {
@@ -17,6 +17,7 @@
           margin: 0 0 50px 15px;
           font-family: serif;
           font-size: $font-22;
+          opacity: 0.5;
         }
       }
     }

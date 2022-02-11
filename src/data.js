@@ -3,6 +3,8 @@ import CookingTimers from './components/projects/CookingTimers';
 import Dispose from './components/projects/Dispose';
 import Onia from './components/projects/Onia';
 import AltSchool from './components/projects/AltSchool';
+import CreateBuildDestroy from './components/projects/CreateBuildDestroy';
+import WikipediaForKids from './components/projects/WikipediaForKids';
 
 let projects = [
   {
@@ -19,8 +21,8 @@ let projects = [
   },
   {
     path: 'wiki-kids',
-    component: 'WikiKids',
-    name: 'Wikipedia for kids',
+    component: WikipediaForKids,
+    name: 'Wikipedia for younger learners',
     description: 'explorations of making Wikipedia more accessible for younger learners'
   },
   {
@@ -31,7 +33,7 @@ let projects = [
   },
   {
     path: 'createbuilddestroy',
-    component: 'CreateBuildDestroy',
+    component: CreateBuildDestroy,
     name: 'Create Build Destroy',
     description: 'a clothing company i ran with a few friends in college'
   },

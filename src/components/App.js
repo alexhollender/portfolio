@@ -2,20 +2,21 @@ import Header from "./Header";
 import Nav from "./Nav";
 import { Outlet, useLocation } from "react-router-dom";
 import '../scss/App.scss';
-import picture from '../img/picture.jpg';
+import picture from '../media/homepage/picture.jpg';
 
 const App = () => {
 
-  // check if there is a project in the URL path
+  // check if there is a project path in the URL path
   var location = useLocation();
   var length = location.pathname.length;
 
   return (
     <>
+    {/* if there is no project path in the URL show the header */}
     {length === 1 &&
       <Header />
     }
-    <div id="container" className={length > 1 ? "project" : "noProject"}>
+    <main id="page" className={length > 1 ? "project" : "noProject"}>
       <section id="left">
         <div className="container-left">
           <p id="intro">hey, i'm alex...these are some things i've worked on as a designer and developer:</p>
@@ -24,15 +25,16 @@ const App = () => {
       </section>
       <section id="right">
         <div className="container-right">
+          {/* if there is no project path in the URL show the image */}
           {length === 1 &&
             <img id="homeImage" src={picture} />
           }
 
+          {/* leads to <Project /> if there is a project path in the URL)*/}
           <Outlet />
-          {/* leads to <ProjectContainer /> */}
         </div>
       </section>
-    </div>
+    </main>
     </>
   )
 }

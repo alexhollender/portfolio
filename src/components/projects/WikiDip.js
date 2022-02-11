@@ -5,7 +5,7 @@ const WikiDip = () => {
   return (
     <>
     <h1>Wikipedia desktop improvements project</h1>
-    <p className="body">Text goes here</p>
+    <p className="text-block">Text goes here</p>
     </>
   )
 }

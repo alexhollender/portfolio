@@ -20,7 +20,9 @@ const Project = () => {
     <Link to="/" id="closeProject"></Link>
     {/* renders project component based on URL path */}
     <div id="projectContainer" className={path}>
-      <RenderDynamicProject />
+      <div id={path}>
+        <RenderDynamicProject />
+      </div>
     </div>
     </>
   )
