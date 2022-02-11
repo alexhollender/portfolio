@@ -3,6 +3,7 @@
 #page {
   display: flex;
 
+  // homepage (no project showing)
   section {
     &#left {
       width: 50%;
@@ -31,16 +32,18 @@
       .container-right {
         overflow: hidden;
         #homeImage {
-          width: 75%;
+          width: 95%;
           max-width: 600px;
           margin: 0 20px 0 0;
           float: right;
+          cursor: pointer;
         }
       }
     }
 
   }
 
+  // project
   &.project {
     height: 100vh;
     overflow: hidden;

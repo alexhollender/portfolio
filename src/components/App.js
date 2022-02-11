@@ -1,8 +1,9 @@
 import Header from "./Header";
 import Nav from "./Nav";
+import Picture from "./Picture";
 import { Outlet, useLocation } from "react-router-dom";
 import '../scss/App.scss';
-import picture from '../media/homepage/picture.jpg';
+import picture from '../media/homepage.jpg';
 
 const App = () => {
 
@@ -27,7 +28,7 @@ const App = () => {
         <div className="container-right">
           {/* if there is no project path in the URL show the image */}
           {length === 1 &&
-            <img id="homeImage" src={picture} />
+            <Picture />
           }
 
           {/* leads to <Project /> if there is a project path in the URL)*/}
