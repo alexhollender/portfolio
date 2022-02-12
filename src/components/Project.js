@@ -22,12 +22,13 @@ const Project = () => {
   // -- View controls -- //
 
   const rightContainer = document.getElementById('right');
-  const projectCont = document.getElementById('projectContainer');
+
   // when component mounts & updates
   useEffect(() => {
     rightContainer.scrollTop = 0;
-    // projectCont.classList.add("my-class");
-    console.log('yoshi');
+    setTimeout(() => {
+      document.getElementById('projectContainer').classList.add('show');
+    }, 200);
   });
 
 
