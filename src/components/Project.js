@@ -1,9 +1,12 @@
+import React, { useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 import { Link, useOutletContext } from "react-router-dom";
 import { getProjects } from "../data";
 import '../scss/Project.scss';
 
 const Project = () => {
+
+  // -- Get & render project -- //
 
   // get current URL path from <Outlet /> context
   var location = useOutletContext();
@@ -14,15 +17,27 @@ const Project = () => {
   // find project that matches current path
   var currProject = projectsArray.find(element => element.path === path);
   // dynamically reference relevant project component
-  const RenderDynamicProject = currProject.component;
+  const ReferencedComponent = currProject.component;
+
+  // -- View controls -- //
+
+  const rightContainer = document.getElementById('right');
+  const projectCont = document.getElementById('projectContainer');
+  // when component mounts & updates
+  useEffect(() => {
+    rightContainer.scrollTop = 0;
+    // projectCont.classList.add("my-class");
+    console.log('yoshi');
+  });
+
 
   return (
     <>
-    <Link to="/" id="closeProject"></Link>
     {/* renders project component based on URL path */}
     <div id="projectContainer" className={path}>
+      <Link to="/" id="closeProject"></Link>
       <div id={path}>
-        <RenderDynamicProject />
+        <ReferencedComponent />
       </div>
     </div>
     </>

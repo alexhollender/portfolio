@@ -6,6 +6,7 @@ class Picture extends React.Component {
   constructor(props) {
     super(props);
     this.createImageArray = this.createImageArray.bind(this);
+    this.loadImagesToState = this.loadImagesToState.bind(this);
     this.nextImage = this.nextImage.bind(this);
     this.state = {
       count: 0,
@@ -13,16 +14,21 @@ class Picture extends React.Component {
     };
   }
 
-  // create then shuffle array of images
+  // create a shuffled array of images
   createImageArray = () => {
     // create array with all images from folder
     var imagesArr = importAll(require.context('../media/homepage', true, /\.(png|jpe?g|svg)$/));
     // create shuffled array of images;
     var shuffledArr = shuffle(imagesArr);
+    // send array to state call
+    this.loadImagesToState(shuffledArr);
+  }
+
+  loadImagesToState = (arr) => {
     // set state of component with shuffled images array
     this.setState((currState) => {
       return {
-        images: shuffledArr
+        images: arr
       }
     });
   }
