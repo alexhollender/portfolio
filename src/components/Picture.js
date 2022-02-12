@@ -30,12 +30,12 @@ class Picture extends React.Component {
   nextImage = () => {
     if (this.state.count < this.state.images.length - 1) {
       this.setState((state) => ({
-        count: state.count + 1
+        count: ++state.count
       }));
     }
   }
 
-  // when component mounts run the function
+  // when component mounts create the image array
   componentDidMount() {
     this.createImageArray();
   }
@@ -44,7 +44,10 @@ class Picture extends React.Component {
     return (
       <>
       <img id="homeImage"
-        src={this.state.count === 0 ? picture : this.state.images[this.state.count]}
+        src={
+          this.state.count === 0 ?
+          picture :
+          this.state.images[this.state.count]}
         onClick={this.nextImage}
       />
       </>

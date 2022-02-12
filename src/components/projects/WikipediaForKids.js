@@ -16,8 +16,8 @@ const WikipediaForKids = () => {
       <source src={overviewMp4} type="video/mp4" />
       Sorry, your browser doesn't support embedded videos.
     </video>
-    <div class="flex">
-      <div class="left">
+    <div className="flex">
+      <div className="left">
         <p><a href="https://mobile-wikipedia.web.app/Hokusai" target="_blank">first prototype</a> <span>(best viewed on a phone)</span></p>
         <video controls width="372px">
           <source src={mediaSliderWebm} type="video/webm" />
@@ -25,7 +25,7 @@ const WikipediaForKids = () => {
           Sorry, your browser doesn't support embedded videos.
         </video>
       </div>
-      <div class="right">
+      <div className="right">
         <p><a href="https://mobile-stories-96b31.web.app/Machu_Picchu" target="_blank">second prototype</a> <span>(best viewed on a phone)</span></p>
         <video controls width="372px">
           <source src={mediaStoryWebm} type="video/webm" />

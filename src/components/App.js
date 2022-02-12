@@ -31,8 +31,9 @@ const App = () => {
             <Picture />
           }
 
-          {/* leads to <Project /> if there is a project path in the URL)*/}
-          <Outlet />
+          {/* leads to <Project /> if there is a project path in the URL) */}
+          {/* pass along URL path to <Project /> so it can render the correct project */}
+          <Outlet context={location.pathname} />
         </div>
       </section>
     </main>

@@ -1,13 +1,14 @@
 import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import { getProjects } from "../data";
 import '../scss/Project.scss';
 
 const Project = () => {
 
-  // get current path
-  var location = useLocation();
-  var path = location.pathname.substring(1);
+  // get current URL path from <Outlet /> context
+  var location = useOutletContext();
+  // remove "/" from beginning of URL path
+  var path = location.substring(1);
   // array of all project data
   let projectsArray = getProjects();
   // find project that matches current path

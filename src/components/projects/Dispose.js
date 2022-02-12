@@ -23,7 +23,7 @@ const Dispose = () => {
       <source media="(min-width:1580px)" srcSet={heroLarge} width="2000" />
       <img src={heroSmall} width="1000" loading="lazy" />
     </picture>
-    <video controls width="90%" autoPlay="true" muted={true}>
+    <video controls width="90%" autoPlay={true} muted={true}>
       <source src={videoWebm} type="video/webm" />
       <source src={videoMp4} type="video/mp4" />
       Sorry, your browser doesn't support embedded videos.
