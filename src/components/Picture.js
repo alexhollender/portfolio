@@ -53,7 +53,8 @@ class Picture extends React.Component {
         src={
           this.state.count === 0 ?
           picture :
-          this.state.images[this.state.count]}
+          this.state.images[this.state.count]
+        }
         onClick={this.nextImage}
       />
       </>

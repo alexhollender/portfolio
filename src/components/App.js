@@ -1,40 +1,41 @@
-import React, { useState, useEffect } from 'react';
 import Header from "./Header";
 import Nav from "./Nav";
 import Picture from "./Picture";
-import { Outlet, useLocation } from "react-router-dom";
+import Project from "./Project";
 import '../scss/App.scss';
 import picture from '../media/homepage.jpg';
 
-const App = (props) => {
+const App = ({ projectPath }) => {
 
-  console.log(props.path);
+  console.log(`App: ${projectPath}`);
 
   return (
     <>
-    {/* if there is no project path in the URL show header */}
-    {!props.path &&
+
+    {/* if no project show header */}
+    {!projectPath &&
       <Header />
     }
-    <main id="page" className={props.path ? "project" : "noProject"}>
+
+    <main id="page" className={projectPath ? "project" : "noProject"}>
+
       <section id="left">
         <div className="container-left">
           <p id="intro">hey, i'm alex...these are some things i've worked on as a designer and developer:</p>
           <Nav />
         </div>
       </section>
+
       <section id="right">
         <div className="container-right">
-          {/* if there is no project path in the URL show <Picture /> */}
-          {!props.path &&
+          {
+            projectPath ?
+            <Project projectPath={projectPath} /> :
             <Picture />
           }
-
-          {/* leads to <Project /> */}
-          {/* pass URL path to <Project /> */}
-          <Outlet context={props.path} />
         </div>
       </section>
+
     </main>
     </>
   )

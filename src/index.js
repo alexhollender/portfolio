@@ -14,7 +14,7 @@ ReactDOM.render(
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<AppRenderer />}>
-            <Route path=":projectId" element={<Project />} />
+            <Route path=":projectPath" />
           </Route>
         </Routes>
     </BrowserRouter>
