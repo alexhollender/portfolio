@@ -6,19 +6,17 @@ import { Outlet, useLocation } from "react-router-dom";
 import '../scss/App.scss';
 import picture from '../media/homepage.jpg';
 
-const App = () => {
+const App = (props) => {
 
-  // check if there is a project path in the URL path
-  var location = useLocation();
-  var length = location.pathname.length;
+  console.log(props.path);
 
   return (
     <>
-    {/* if there is no project path in the URL show the header */}
-    {length === 1 &&
+    {/* if there is no project path in the URL show header */}
+    {!props.path &&
       <Header />
     }
-    <main id="page" className={length > 1 ? "project" : "noProject"}>
+    <main id="page" className={props.path ? "project" : "noProject"}>
       <section id="left">
         <div className="container-left">
           <p id="intro">hey, i'm alex...these are some things i've worked on as a designer and developer:</p>
@@ -27,14 +25,14 @@ const App = () => {
       </section>
       <section id="right">
         <div className="container-right">
-          {/* if there is no project path in the URL show the image */}
-          {length === 1 &&
+          {/* if there is no project path in the URL show <Picture /> */}
+          {!props.path &&
             <Picture />
           }
 
-          {/* leads to <Project /> if there is a project path in the URL) */}
-          {/* pass along URL path to <Project /> so it can render the correct project */}
-          <Outlet context={location.pathname} />
+          {/* leads to <Project /> */}
+          {/* pass URL path to <Project /> */}
+          <Outlet context={props.path} />
         </div>
       </section>
     </main>

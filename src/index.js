@@ -5,19 +5,17 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import App from './components/App';
+import AppRenderer from './components/AppRenderer';
 import Project from './components/Project';
-import Picture from './components/Picture';
 import './scss/index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />}>
+          <Route path="/" element={<AppRenderer />}>
             <Route path=":projectId" element={<Project />} />
           </Route>
-          <Route path="/picture" element={<Picture />} />
         </Routes>
     </BrowserRouter>
   </React.StrictMode>,

@@ -6,12 +6,8 @@ import '../scss/Project.scss';
 
 const Project = () => {
 
-  // -- Get & render project -- //
-
   // get current URL path from <Outlet /> context
-  var location = useOutletContext();
-  // remove "/" from beginning of URL path
-  var path = location.substring(1);
+  const path = useOutletContext();
   // array of all project data
   let projectsArray = getProjects();
   // find project that matches current path
@@ -19,13 +15,14 @@ const Project = () => {
   // dynamically reference relevant project component
   const ReferencedComponent = currProject.component;
 
-  // -- View controls -- //
-
-  const rightContainer = document.getElementById('right');
 
   // when component mounts & updates
+  const rightContainer = document.getElementById('right');
+
   useEffect(() => {
-    rightContainer.scrollTop = 0;
+    if (rightContainer) {
+      rightContainer.scrollTop = 0;
+    }
     setTimeout(() => {
       document.getElementById('projectContainer').classList.add('show');
     }, 200);
@@ -35,7 +32,7 @@ const Project = () => {
   return (
     <>
     {/* renders project component based on URL path */}
-    <div id="projectContainer" className={path}>
+    <div id="projectContainer">
       <Link to="/" id="closeProject"></Link>
       <div id={path}>
         <ReferencedComponent />
