@@ -1,5 +1,3 @@
-import { importAll } from '../../functions.js';
-
 const WikiDip = () => {
 
   return (
