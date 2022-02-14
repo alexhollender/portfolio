@@ -5,7 +5,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import AppRenderer from './components/AppRenderer';
+import App from './components/App';
 import Project from './components/Project';
 import './scss/index.scss';
 
@@ -13,8 +13,8 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AppRenderer />}>
-            <Route path=":projectPath" />
+          <Route path="/" element={<App />}>
+            <Route path=":projectPath" element={<App />} />
           </Route>
         </Routes>
     </BrowserRouter>

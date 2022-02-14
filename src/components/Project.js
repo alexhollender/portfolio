@@ -25,17 +25,13 @@ const Project = ({ projectPath }) => {
     }
   });
 
-
   return (
-    <>
-    {/* renders project component based on URL path */}
     <div id="projectContainer">
       <Link to="/" id="closeProject"></Link>
       <div id={projectPath}>
         <ReferencedComponent />
       </div>
     </div>
-    </>
   )
 }
 
