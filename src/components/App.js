@@ -1,14 +1,12 @@
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import Header from "./Header";
 import Nav from "./Nav";
 import Picture from "./Picture";
-import Project from "./Project";
 import '../scss/App.scss';
-import picture from '../media/homepage.jpg';
 
 const App = () => {
 
-  // get project id from react router
+  // get project path from react router
   const { projectPath } = useParams();
 
   console.log(`App: ${projectPath}`);
@@ -34,7 +32,7 @@ const App = () => {
         <div className="container-right">
           {
             projectPath ?
-            <Project projectPath={projectPath} /> :
+            <Outlet context={projectPath} /> :
             <Picture />
           }
         </div>

@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import App from './components/App';
+import Project from './components/Project'
 import './scss/index.scss';
 
 ReactDOM.render(
@@ -13,7 +14,7 @@ ReactDOM.render(
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path=":projectPath" element={<App />} />
+            <Route path=":projectPath" element={<Project />} />
           </Route>
         </Routes>
     </BrowserRouter>

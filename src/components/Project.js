@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
+import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { getProjects } from "../data";
 import '../scss/Project.scss';
 
-const Project = ({ projectPath }) => {
+const Project = () => {
+  // get project id from outlet context
+  const projectPath = useOutletContext();
 
   console.log(`Project: ${projectPath}`);
 
@@ -14,10 +17,8 @@ const Project = ({ projectPath }) => {
   // dynamically reference relevant project component
   const ReferencedComponent = currProject.component;
 
-
   // when component mounts & updates
   const rightContainer = document.getElementById('right');
-
   useEffect(() => {
     if (rightContainer) {
       rightContainer.scrollTop = 0;
