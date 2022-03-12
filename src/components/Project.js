@@ -34,10 +34,11 @@ const Project = () => {
 
       <section id="right">
         <div className="container-right">
+          {/* if no projectPath show Picture */}
           {
-            projectPath ?
-            <ProjectContent project={projectPath} /> :
-            <Picture />
+            !projectPath ?
+            <Picture /> :
+            <ProjectContent project={projectPath} />
           }
         </div>
       </section>

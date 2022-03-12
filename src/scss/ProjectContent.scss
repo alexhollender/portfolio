@@ -14,19 +14,6 @@
     to {opacity: 1;}
   }
 
-  #closeProject {
-    width: 25px;
-    height: 25px;
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    background-image: url('../media/close.svg');
-    background-size: cover;
-    border: 1px solid #ffffff00;
-
-    &:hover { border: 1px solid black; }
-  }
-
   h1 {
     font-family: sans-serif;
   }

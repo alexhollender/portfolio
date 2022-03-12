@@ -2,6 +2,7 @@
 
 #project-wrapper {
   display: flex;
+  margin-top: 43px;
 
   // homepage (no project showing)
   section {
@@ -40,14 +41,25 @@
   &.projectActive {
     height: 100vh;
     overflow: hidden;
+    margin-top: 0;
 
     section {
       overflow-y: scroll;
 
       &#left {
         width: 480px;
+        margin-top: 42px;
         .container-left {
-          margin: 50px auto 50px auto;
+          margin: 60px auto 50px auto;
+          #intro { display: none; }
+        }
+        &::before {
+          position: absolute;
+          content: '';
+          width: 480px;
+          height: 40px;
+          background: rgb(255,255,255);
+          background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
         }
       }
 

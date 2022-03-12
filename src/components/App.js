@@ -13,10 +13,12 @@ const App = () => {
   return (
     <>
 
-    {/* if no project show header */}
-    <Header view={projectPath && "project"}/>
+    {/* tell the header if a project is active */}
+    <Header isSub={projectPath && "sub"}/>
 
     <main>
+      {/* context will only be passed along if */}
+      {/* the URL matches the :projectPath */}
       <Outlet context={projectPath} />
     </main>
     </>

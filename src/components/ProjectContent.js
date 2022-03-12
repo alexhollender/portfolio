@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useOutletContext } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { getProjects } from "../data";
 import '../scss/ProjectContent.scss';
 
@@ -25,7 +24,6 @@ const ProjectContent = ({ project }) => {
 
   return (
     <div id="projectContent">
-      <Link to="/" id="closeProject"></Link>
       <div id={project}>
         <ReferencedComponent />
       </div>
