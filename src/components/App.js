@@ -8,34 +8,16 @@ const App = () => {
 
   // get project path from url (via react router)
   const { projectPath } = useParams();
-
   console.log(`App: ${projectPath}`);
 
   return (
     <>
 
     {/* if no project show header */}
-    <Header view={!projectPath && "project"}/>
+    <Header view={projectPath && "project"}/>
 
-    <main id="page" className={projectPath ? "project" : "noProject"}>
-
-      <section id="left">
-        <div className="container-left">
-          <p id="intro">hey, i'm alex...these are some things i've worked on as a designer and developer:</p>
-          <Nav />
-        </div>
-      </section>
-
-      <section id="right">
-        <div className="container-right">
-          {
-            projectPath ?
-            <Outlet context={projectPath} /> :
-            <Picture />
-          }
-        </div>
-      </section>
-
+    <main>
+      <Outlet context={projectPath} />
     </main>
     </>
   )

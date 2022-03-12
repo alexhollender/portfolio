@@ -2,20 +2,15 @@ import React, { useEffect } from 'react';
 import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { getProjects } from "../data";
+import Nav from "./Nav";
+import Picture from "./Picture";
+import ProjectContent from "./ProjectContent";
 import '../scss/Project.scss';
 
 const Project = () => {
   // get project id from outlet context (i.e. props)
   const projectPath = useOutletContext();
-
   console.log(`Project: ${projectPath}`);
-
-  // array of all project data
-  let projectsArray = getProjects();
-  // find project that matches current path
-  var currProject = projectsArray.find(element => element.path === projectPath);
-  // dynamically reference relevant project component
-  const ReferencedComponent = currProject.component;
 
   // when component mounts & updates
   const rightContainer = document.getElementById('right');
@@ -26,11 +21,26 @@ const Project = () => {
   });
 
   return (
-    <div id="projectContainer">
-      <Link to="/" id="closeProject"></Link>
-      <div id={projectPath}>
-        <ReferencedComponent />
-      </div>
+    <div
+      id="project-wrapper"
+      className={projectPath ? "projectActive" : "initial"}
+    >
+      <section id="left">
+        <div className="container-left">
+          <p id="intro">hey, i'm alex...these are some things i've worked on as a designer and developer:</p>
+          <Nav />
+        </div>
+      </section>
+
+      <section id="right">
+        <div className="container-right">
+          {
+            projectPath ?
+            <ProjectContent project={projectPath} /> :
+            <Picture />
+          }
+        </div>
+      </section>
     </div>
   )
 }
