@@ -9,7 +9,7 @@ const Nav = () => {
 
   return (
     <>
-    <nav>
+    <nav id="projects">
       {projects.map(project => (
         <NavLink to={`/${project.path}`} key={project.path}>
           <NavItem name={project.name} description={project.description}/>

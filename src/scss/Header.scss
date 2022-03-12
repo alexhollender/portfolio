@@ -28,18 +28,18 @@ header {
     display: none;
   }
 
-  div {
-    &:last-child {
-      display: flex;
-      flex-direction: column;
-    }
-
+  div, nav {
     a {
       color: black;
       text-decoration: none;
       &:hover { text-decoration: underline; }
       &:visited { color: black; }
+      &.active { text-decoration: underline;}
     }
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
   }
   &.sub {
     #closeProject { display: block; }

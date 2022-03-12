@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import '../scss/Header.scss';
 
 const Header = ({ isSub }) => {
@@ -8,7 +8,10 @@ const Header = ({ isSub }) => {
       <Link to="/" id="closeProject">← close project detail view</Link>
       <div className="notSub"><p>Alex Hollender</p></div>
       <div className="notSub"><p>you win some<br/>you loose some</p></div>
-      <div><u>home page</u>about me</div>
+      <nav>
+        <NavLink to="/">home page</NavLink>
+        <NavLink to="aboutme">about me</NavLink>
+      </nav>
     </header>
   )
 }
