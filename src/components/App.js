@@ -6,7 +6,7 @@ import '../scss/App.scss';
 
 const App = () => {
 
-  // get project path from react router
+  // get project path from url (via react router)
   const { projectPath } = useParams();
 
   console.log(`App: ${projectPath}`);
@@ -15,9 +15,7 @@ const App = () => {
     <>
 
     {/* if no project show header */}
-    {!projectPath &&
-      <Header />
-    }
+    <Header view={!projectPath && "project"}/>
 
     <main id="page" className={projectPath ? "project" : "noProject"}>
 

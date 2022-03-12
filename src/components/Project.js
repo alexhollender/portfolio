@@ -5,7 +5,7 @@ import { getProjects } from "../data";
 import '../scss/Project.scss';
 
 const Project = () => {
-  // get project id from outlet context
+  // get project id from outlet context (i.e. props)
   const projectPath = useOutletContext();
 
   console.log(`Project: ${projectPath}`);

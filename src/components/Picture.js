@@ -1,6 +1,7 @@
 import React from 'react';
 import { importAll, shuffle } from '../functions.js';
-import picture from '../media/homepage.jpg';
+import '../scss/Picture.scss';
+import defaultPicture from '../media/homepage.jpg';
 
 class Picture extends React.Component {
   constructor(props) {
@@ -10,17 +11,15 @@ class Picture extends React.Component {
     this.nextImage = this.nextImage.bind(this);
     this.state = {
       count: 0,
-      images: []
+      images: (importAll(require.context('../media/homepage', true, /\.(png|jpe?g|svg)$/)))
     };
   }
 
   // create a shuffled array of images
   createImageArray = () => {
-    // create array with all images from folder
-    var imagesArr = importAll(require.context('../media/homepage', true, /\.(png|jpe?g|svg)$/));
-    // create shuffled array of images;
-    var shuffledArr = shuffle(imagesArr);
-    // send array to state call
+    // shuffle array of images;
+    var shuffledArr = shuffle(this.state.images);
+    // update state
     this.loadImagesToState(shuffledArr);
   }
 
@@ -34,9 +33,17 @@ class Picture extends React.Component {
   }
 
   nextImage = () => {
+    // if count is less than total # of images
     if (this.state.count < this.state.images.length - 1) {
+      // move to the next image
       this.setState((state) => ({
         count: ++state.count
+      }));
+    // otherwise, reset the count
+    } else if (this.state.count === 21) {
+      // shuffle array of images
+      this.setState((state) => ({
+        count: 0
       }));
     }
   }
@@ -49,10 +56,10 @@ class Picture extends React.Component {
   render() {
     return (
       <>
-      <img id="homeImage"
+      <img id="picture"
         src={
           this.state.count === 0 ?
-          picture :
+          defaultPicture :
           this.state.images[this.state.count]
         }
         onClick={this.nextImage}
