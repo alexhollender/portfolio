@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 #picture {
   width: 95%;
   max-width: 600px;
@@ -9,9 +11,4 @@
   animation-duration: 300ms;
   animation-delay: 300ms;
   animation-fill-mode: forwards;
-
-  @keyframes example {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
 }

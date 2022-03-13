@@ -5,11 +5,13 @@ const Header = ({ isSub }) => {
 
   return (
     <header className={isSub ? "sub" : "initial"}>
-      <Link to="/" id="closeProject">← close project detail view</Link>
-      <div className="notSub"><p>Alex Hollender</p></div>
+      <div id="header-left">
+        <Link to="/" id="closeProject">← close project detail view</Link>
+        <p className="notSub">Alex Hollender</p>
+      </div>
       <div className="notSub"><p>you win some<br/>you loose some</p></div>
       <nav>
-        <NavLink to="/">home page</NavLink>
+        <NavLink to="/">projects</NavLink>
         <NavLink to="aboutme">about me</NavLink>
       </nav>
     </header>
