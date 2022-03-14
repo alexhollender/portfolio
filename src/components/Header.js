@@ -4,12 +4,12 @@ import '../scss/Header.scss';
 const Header = ({ isSub }) => {
 
   return (
-    <header className={isSub ? "sub" : "initial"}>
+    <header className={isSub && "sub"}>
       <div id="header-left">
-        <Link to="/" id="closeProject">← close project detail view</Link>
+        <Link to="/" id="closeProject">← back</Link>
         <p className="notSub">Alex Hollender</p>
       </div>
-      <div className="notSub"><p>you win some,<br/>you loose some</p></div>
+      <div className="notSub"><p>you win some,<br/>you lose some</p></div>
       <nav>
         <NavLink to="/">projects</NavLink>
         <NavLink to="aboutme">about me</NavLink>

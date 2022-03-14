@@ -14,7 +14,8 @@ const Onia = () => {
   return (
     <>
     <h1>Onia</h1>
-    <p className="text-block">in 2010 a friend of my sister's, Carl, started a small, high-end, men's swimsuit company in NYC called <a href="https://onia.com/" target="_blank" rel="noreferrer">Onia</a>. After graduating from college in the spring of 2011 I started helping Carl out, mostly with website and marketing/communications design stuff. We enjoyed working together so I started working for Carl full time. Over the next two years I helped shape the brand. I designed swimsuits and other products, art directed photoshoots & popup shops, desiged packaging & collateral, created mood boards, marketing materials, designed and redesigned the website, and did other such things. I was the only designer working on Onia at the time. The brand is still around and is doing well.</p>
+    <p className="text-block">In 2010 a friend of my sister's, Carl, started a small, high-end, men's swimsuit company in NYC called <i>Onia</i>. After graduating from college in the spring of 2011 I started helping Carl out, mostly with website and marketing/communications design stuff. We enjoyed working together so a few months later I started working for Carl full time. Over the next two years I helped shape the brand. I designed swimsuits and other products, art directed photoshoots & popup shops, desiged packaging & collateral, created mood boards, marketing materials, designed and redesigned the website, and more. I was the only designer working on Onia at the time. The brand is still around and is doing well.</p>
+    <p className="text-block"><a href="http://onia.com" target="_blank" rel="noreferrer">onia.com</a></p>
     {imagesArr.map((element, index) => (
       <picture key={index}>
         <source media="(min-width:1580px)" srcSet={Object.keys(element)} width="2000" />

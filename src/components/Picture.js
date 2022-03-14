@@ -11,7 +11,7 @@ class Picture extends React.Component {
     this.nextImage = this.nextImage.bind(this);
     this.state = {
       count: 0,
-      images: (importAll(require.context('../media/homepage', true, /\.(png|jpe?g|svg)$/)))
+      images: (importAll(require.context('../media/homepage', true, /\.(png|jpe?g|svg|gif)$/)))
     };
   }
 
@@ -40,7 +40,7 @@ class Picture extends React.Component {
         count: ++state.count
       }));
     // otherwise, reset the count
-    } else if (this.state.count === 21) {
+  } else if (this.state.count === this.state.images.length - 1) {
       // shuffle array of images
       this.setState((state) => ({
         count: 0
@@ -55,16 +55,16 @@ class Picture extends React.Component {
 
   render() {
     return (
-      <>
-      <img id="picture"
-        src={
-          this.state.count === 0 ?
-          defaultPicture :
-          this.state.images[this.state.count]
-        }
-        onClick={this.nextImage}
-      />
-      </>
+      <div id="picture-wrapper">
+        <img id="picture"
+          src={
+            this.state.count === 0 ?
+            defaultPicture :
+            this.state.images[this.state.count]
+          }
+          onClick={this.nextImage}
+        />
+      </div>
     );
   }
 }

@@ -3,7 +3,7 @@ import { getProjects } from "../data";
 import '../scss/ProjectContent.scss';
 
 const ProjectContent = ({ project }) => {
-  
+
   console.log(`ProjectContent: ${project}`);
   // array of all project data
   let projectsArray = getProjects();
@@ -21,7 +21,7 @@ const ProjectContent = ({ project }) => {
   });
 
   return (
-    <div id="projectContent">
+    <div id="project-content">
       <div id={project}>
         <ReferencedComponent />
       </div>

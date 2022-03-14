@@ -1,14 +1,25 @@
 @import './variables.scss';
 
-#picture {
-  width: 95%;
-  max-width: 600px;
-  margin: 0 20px 0 0;
-  float: right;
-  cursor: pointer;
+#picture-wrapper {
+  width: 50%;
+  height: calc(100vh + 50px);
+  position: absolute;
+  top: 0;
+  right: 0;
   opacity: 0;
   animation-name: example;
   animation-duration: 300ms;
   animation-delay: 300ms;
   animation-fill-mode: forwards;
+
+  #picture {
+    width: 95%;
+    max-width: 600px;
+    position: sticky;
+    height: fit-content;
+    top: 0;
+    margin: 42px 20px 0 0;
+    float: right;
+    cursor: pointer;
+  }
 }

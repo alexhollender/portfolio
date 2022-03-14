@@ -2,17 +2,15 @@
 
 #project-wrapper {
   display: flex;
-  margin-top: 42px;
-
-  // homepage (no project showing)
+  // main layout (no project showing)
   section {
-    &#left {
+    &#project-left {
       width: 50%;
       transition: all 100ms ease;
 
-      .container-left {
+      #project-nav {
         width: 420px;
-        margin: 130px auto 50px auto;
+        margin: 140px auto 50px auto;
         transition: all 100ms ease;
         opacity: 0;
         animation-name: example;
@@ -29,49 +27,41 @@
       }
     }
 
-
-    &#right {
+    &#project-right {
       width: 50%;
-      position: sticky;
-      height: fit-content;
-      top: 0;
-      .container-right {
-        overflow: hidden;
-      }
     }
-
   }
 
   // project showing
-  &.projectActive {
+  &.project-active {
     height: 100vh;
     overflow: hidden;
-    margin-top: 0;
 
     section {
       overflow-y: scroll;
 
-      &#left {
+      &#project-left {
         width: 480px;
-        margin-top: 42px;
-        .container-left {
-          margin: 60px auto 50px auto;
+        #project-nav {
+          margin: 104px auto 50px auto;
           #intro { display: none; }
         }
         &::before {
-          position: absolute;
+          position: fixed;
+          top: 0;
           content: '';
           width: 480px;
           height: 40px;
           background: rgb(255,255,255);
-          background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+          z-index: 1;
         }
       }
 
-      &#right {
+      &#project-right {
         flex: 1;
         height: auto;
         position: initial;
+        margin-top: 0;
 
         .container-right {
           flex: 1;

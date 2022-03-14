@@ -12,10 +12,9 @@ const Howlerz = () => {
   return (
     <>
     <h1>Howlerz</h1>
-    <p className="text-block">My friend Noah is an artist, and also works for Christie's as an art dealer. Around 2021 he started getting interested in digital currencies and digital art (i.e. NFTs). In January of 2022 he told me he was going to sell a collection of digital artworks called <i>Howlerz</i>, and asked if I could make him a website where people could buy them. I am always happy to build websites for/with friends, and was intrigued by the challenge of making a "web3" site (which, in the end, was made pretty simple by the Ethers library). It was also fun to create a more unique, hand-made looking website. All 5,000 Howlerz sold out in under a minute. A wild, wacky experience all around. AwwoOOoo.</p>
+    <p className="text-block">My friend Noah is an artist, and also works for Christie's as an art dealer. Around 2021 he started getting interested in digital currencies and digital art (i.e. NFTs). In January of 2022 he told me he was going to sell a collection of digital artworks called <i>Howlerz</i>, and asked if I could make him a website where people could buy them. I am always happy to build websites for/with friends, and was intrigued by the challenge of making a "web3" site (which, in the end, was made pretty simple by the Ethers library). It was also fun to create a more unique, hand-made looking website. All 5,000 Howlerz sold out in under a minute ; )</p>
     <p className="text-block links">
-      <a href="https://howlerz.io" target="_blank" rel="noreferrer">link to website</a>
-      <a href="https://twitter.com/HOWLERZNFT" target="_blank" rel="noreferrer">link to twitter</a>
+      <a href="https://howlerz.io" target="_blank" rel="noreferrer">howlerz.io</a>
     </p>
     <video controls width="100%" autoPlay={true} muted={true} loop={true}>
       <source src={videoWebm} type="video/webm" />

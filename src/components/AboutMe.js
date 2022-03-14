@@ -1,9 +1,11 @@
+import '../scss/AboutMe.scss';
+
 const AboutMe = () => {
 
   return (
-    <>
-      <div>about me</div>
-    </>
+    <div id="about-me-page">
+      <div id="about-me-content">about me:</div>
+    </div>
   )
 }
 

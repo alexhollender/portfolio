@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   margin: 10px 15px 5px;
   font-family: vcr;
   font-size: $font-14;
@@ -41,7 +41,7 @@ header {
   }
   &.sub {
     #header-left {
-      transform: translate(35px, 20px);
+      transform: translateX(35px);
       #closeProject { display: block; }
     }
     .notSub { display: none; }

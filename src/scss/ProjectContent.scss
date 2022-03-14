@@ -1,7 +1,7 @@
 @import './variables.scss';
 
-#projectContent {
-  padding: 50px 50px 0 50px;
+#project-content {
+  padding: 40px 50px 0 50px;
   border-left: 1px dotted #cdcdcd;
   opacity: 0;
   animation-name: example;
@@ -68,6 +68,4 @@
       p { margin-bottom: 10px; }
     }
   }
-
-
 }
