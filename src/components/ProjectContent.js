@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
-import { useOutletContext } from "react-router-dom";
 import { getProjects } from "../data";
 import '../scss/ProjectContent.scss';
 
 const ProjectContent = ({ project }) => {
-
+  
   console.log(`ProjectContent: ${project}`);
-
   // array of all project data
   let projectsArray = getProjects();
   // find project that matches current path

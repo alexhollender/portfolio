@@ -1,7 +1,5 @@
 import { Outlet, useParams } from "react-router-dom";
 import Header from "./Header";
-import Nav from "./Nav";
-import Picture from "./Picture";
 import '../scss/App.scss';
 
 const App = () => {

@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { useOutletContext } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { getProjects } from "../data";
 import Nav from "./Nav";
 import Picture from "./Picture";
 import ProjectContent from "./ProjectContent";
