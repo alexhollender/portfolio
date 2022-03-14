@@ -1,4 +1,5 @@
 import WikiDip from './components/projects/WikiDip';
+import Howlerz from './components/projects/Howlerz';
 import CookingTimers from './components/projects/CookingTimers';
 import Dispose from './components/projects/Dispose';
 import Onia from './components/projects/Onia';
@@ -12,6 +13,12 @@ let projects = [
     component: WikiDip,
     name: 'Wikipedia desktop improvements project',
     description: 'various improvements to the desktop interface of Wikipedia'
+  },
+  {
+    path: 'howlerz',
+    component: Howlerz,
+    name: 'Howlerz',
+    description: 'a website where people bought the Howlerz digital art collection'
   },
   {
     path: 'cooking-timers',

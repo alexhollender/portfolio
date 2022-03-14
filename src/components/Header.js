@@ -9,7 +9,7 @@ const Header = ({ isSub }) => {
         <Link to="/" id="closeProject">← close project detail view</Link>
         <p className="notSub">Alex Hollender</p>
       </div>
-      <div className="notSub"><p>you win some<br/>you loose some</p></div>
+      <div className="notSub"><p>you win some,<br/>you loose some</p></div>
       <nav>
         <NavLink to="/">projects</NavLink>
         <NavLink to="aboutme">about me</NavLink>
