@@ -11,7 +11,7 @@ let projects = [
   {
     path: 'wiki-dip',
     component: WikiDip,
-    name: 'Wikipedia desktop improvements project',
+    name: 'Wikipedia: desktop improvements project',
     description: 'various improvements to the desktop interface of Wikipedia'
   },
   {

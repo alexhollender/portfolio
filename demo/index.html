@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Project Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+
+  <main>
+    <section id="left">
+      <div class="container">
+        <section id="intro">
+          <p>hey, i'm alex, and these are some things i've worked on as a designer and developer. <em>click on a project to see more information:</em></p>
+        </section>
+        <section id="wikidip" onclick="showProject()">
+          <h3>Wikipedia desktop improvements project</h3>
+          <p>various improvements to the desktop interface of Wikipedia</p>
+          <p>ongoing</p>
+        </section>
+        <section id="cookingtimers" onclick="showProject()">
+          <h3>Cooking timers</h3>
+          <p>a basic timer tool</p>
+        </section>
+        <section id="wikikids" onclick="showProject()">
+          <h3>Wikipedia for kids</h3>
+          <p>explorations of making Wikipedia more accessible for younger learners</p>
+        </section>
+        <section id="dispose" onclick="showProject()">
+          <h3>DISPOSE</h3>
+          <p>an art project / online magazine involving disposable cameras</p>
+        </section>
+        <section id="cbd" onclick="showProject()">
+          <h3>Create Build Destroy</h3>
+          <p>a clothing company i ran with a few friends in college</p>
+        </section>
+        <section id="altschool" onclick="showProject()">
+          <h3>AltSchool</h3>
+          <p>an education technology startup i worked for in san francisco</p>
+        </section>
+        <section id="onia" onclick="showProject()">
+          <h3>Onia</h3>
+          <p>a clothing company in nyc</p>
+        </section>
+      </div>
+    </section>
+    <section id="right">
+      <div id="close" onclick="closeProject()">close</div>
+      <div class="container">
+        <!-- project content gets added here -->
+      </div>
+    </section>
+  </main>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+  <script src="js/projects.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

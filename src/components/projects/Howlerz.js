@@ -22,6 +22,7 @@ const Howlerz = () => {
       <source src={videoMp4} type="video/mp4" />
       Sorry, your browser doesn't support embedded videos.
     </video>
+    <p className="text-block">Some of the Howlerz artwork <i>(by Noah Davis)</i>:</p>
     <img src={howlerz1} width="1200" loading="lazy" />
     <img src={howlerz2} width="1200" loading="lazy" />
     <img src={howlerz3} width="1200" loading="lazy" />
