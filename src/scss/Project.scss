@@ -2,6 +2,8 @@
 
 #project-wrapper {
   display: flex;
+  // to account for header
+  margin-top: 35px;
   // main layout (no project showing)
   section {
     &#project-left {
@@ -10,7 +12,7 @@
 
       #project-nav {
         width: 420px;
-        margin: 140px auto 50px auto;
+        margin: 110px auto 50px auto;
         transition: all 100ms ease;
         opacity: 0;
         animation-name: fadeIn;
@@ -34,17 +36,21 @@
 
   // project showing
   &.project-active {
-    height: 100vh;
+    height: calc(100vh - 35px);
     overflow: hidden;
 
     section {
       overflow-y: scroll;
 
       &#project-left {
-        width: 480px;
+        width: 420px;
         #project-nav {
-          margin: 70px auto 50px auto;
+          width: 360px;
+          margin: 40px auto 50px auto;
           #intro { display: none; }
+          a {
+            p, h3 { font-size: 16px; }
+          }
         }
       }
 

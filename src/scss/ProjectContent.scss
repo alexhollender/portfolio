@@ -1,7 +1,8 @@
 @import './variables.scss';
 
 #project-content {
-  padding: 70px 50px 0 50px;
+  // top is 36px to account for the 150% line height
+  padding: 36px 50px 0 50px;
   border-left: 1px dotted #cdcdcd;
   opacity: 0;
   animation-name: fadeIn;
@@ -14,9 +15,9 @@
   }
 
   p {
+    max-width: 850px;
     line-height: 150%;
     font-size: $font-18;
-    &.text-block { max-width: 850px; }
     & + p { margin-top: 10px; }
   }
 

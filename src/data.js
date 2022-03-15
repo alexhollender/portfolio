@@ -55,12 +55,6 @@ let projects = [
     component: Onia,
     name: 'Onia',
     description: 'my first job out of college, designer for a clothing company in nyc'
-  },
-  {
-    path: 'misc',
-    component: '',
-    name: 'Misc.',
-    description: 'a bunch of other bits and pieces'
   }
 ];
 
