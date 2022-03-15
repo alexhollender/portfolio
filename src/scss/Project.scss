@@ -13,7 +13,7 @@
         margin: 140px auto 50px auto;
         transition: all 100ms ease;
         opacity: 0;
-        animation-name: example;
+        animation-name: fadeIn;
         animation-duration: 300ms;
         animation-delay: 300ms;
         animation-fill-mode: forwards;
@@ -43,25 +43,14 @@
       &#project-left {
         width: 480px;
         #project-nav {
-          margin: 104px auto 50px auto;
+          margin: 70px auto 50px auto;
           #intro { display: none; }
-        }
-        &::before {
-          position: fixed;
-          top: 0;
-          content: '';
-          width: 480px;
-          height: 40px;
-          background: rgb(255,255,255);
-          z-index: 1;
         }
       }
 
       &#project-right {
         flex: 1;
         height: auto;
-        position: initial;
-        margin-top: 0;
 
         .container-right {
           flex: 1;

@@ -1,10 +1,10 @@
 @import './variables.scss';
 
 #project-content {
-  padding: 40px 50px 0 50px;
+  padding: 70px 50px 0 50px;
   border-left: 1px dotted #cdcdcd;
   opacity: 0;
-  animation-name: example;
+  animation-name: fadeIn;
   animation-duration: 300ms;
   animation-delay: 300ms;
   animation-fill-mode: forwards;

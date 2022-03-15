@@ -17,14 +17,9 @@ header {
   position: fixed;
   top: 0;
   z-index: 2;
-  margin: 10px 15px 5px;
+  padding: 10px 15px 5px;
   font-family: vcr;
   font-size: $font-14;
-
-  #header-left {
-    transition: all 100ms;
-    #closeProject { display: none; }
-  }
 
   a {
     color: black;
@@ -38,12 +33,5 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-  }
-  &.sub {
-    #header-left {
-      transform: translateX(35px);
-      #closeProject { display: block; }
-    }
-    .notSub { display: none; }
   }
 }

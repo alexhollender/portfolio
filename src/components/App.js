@@ -11,8 +11,8 @@ const App = () => {
 
   return (
     <>
-    {/* tell the header if a project is active */}
-    <Header isSub={projectPath && "sub"}/>
+    {/* if no active project, show header */}
+    { !projectPath && <Header /> }
 
     {/* tell the main element if a project is active */}
     <main>
