@@ -1,18 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import '../scss/Header.scss';
 
-const Header = () => {
+const Header = ({ detail }) => {
+
+  const scrollBackUp = () => {
+    document.getElementById('project-nav').scrollIntoView();
+  }
 
   return (
-    <header>
+    <header className={detail && "detail"}>
 
-      <Link to="/">Alex Hollender</Link>
+      <Link to="/" onClick={scrollBackUp}>Alex Hollender</Link>
 
-      <div className="hide"><p>you win some,<br/>you lose some</p></div>
+      <div className="hide">you win some,<br/>you lose some</div>
 
-      <nav>
-        <NavLink to="aboutme">about me</NavLink>
-      </nav>
+      <NavLink to="aboutme">about me</NavLink>
 
     </header>
   )

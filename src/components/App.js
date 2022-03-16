@@ -1,6 +1,5 @@
 import { Outlet, useParams } from "react-router-dom";
 import Header from "./Header";
-import Picture from "./Picture";
 import '../scss/App.scss';
 
 const App = () => {
@@ -11,8 +10,7 @@ const App = () => {
 
   return (
     <>
-    {/* if no active project, show header */}
-    { !projectPath && <Header /> }
+    <Header detail={projectPath} />
 
     {/* tell the main element if a project is active */}
     <main>
@@ -20,9 +18,6 @@ const App = () => {
       {/* renders project, about me, etc. */}
       {/* context only if the URL has a :projectPath */}
       <Outlet context={projectPath} />
-
-      {/* if no active project, show picture */}
-      { !projectPath && <Picture /> }
 
     </main>
     </>

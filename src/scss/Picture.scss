@@ -2,8 +2,9 @@
 
 #picture-wrapper {
   width: 50%;
-  height: calc(100vh + 50px);
+  height: 100vh;
   position: absolute;
+  z-index: -1;
   top: 0;
   right: 0;
   opacity: 0;
@@ -17,7 +18,7 @@
     max-width: 600px;
     position: sticky;
     top: 0;
-    margin: 42px 20px 0 0;
+    margin: 38px 20px 0 0;
     float: right;
     cursor: pointer;
   }

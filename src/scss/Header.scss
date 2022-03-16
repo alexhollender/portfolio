@@ -17,9 +17,11 @@ header {
   position: fixed;
   top: 0;
   z-index: 2;
-  padding: 10px 15px 5px;
+  padding: 8px 15px 4px 15px;
   font-family: vcr;
   font-size: $font-14;
+
+  a, div { transition: color 200ms; }
 
   a {
     color: black;
@@ -33,5 +35,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+  }
+
+  &.detail {
+    a, div { color: #a5a5a5; }
+    .hide { display: none; }
   }
 }
