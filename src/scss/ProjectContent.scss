@@ -1,7 +1,8 @@
 @import './variables.scss';
 
 #project-content {
-  // top is 36px to account for the 150% line height
+  min-height: 100vh;
+  // top padding is to account for the 150% line height
   padding: 36px 50px 0 50px;
   border-left: 1px dotted #cdcdcd;
   opacity: 0;
