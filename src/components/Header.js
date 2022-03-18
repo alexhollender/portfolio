@@ -4,7 +4,10 @@ import '../scss/Header.scss';
 const Header = ({ detail }) => {
 
   const scrollBackUp = () => {
-    document.getElementById('project-nav').scrollIntoView();
+    const projectNavElem = document.getElementById('project-nav');
+    if (projectNavElem) {
+      document.getElementById('project-nav').scrollIntoView();
+    }
   }
 
   return (

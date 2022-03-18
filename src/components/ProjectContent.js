@@ -13,11 +13,9 @@ const ProjectContent = ({ project }) => {
   const ReferencedComponent = currProject.component;
 
   // when component mounts & updates
-  const rightContainer = document.getElementById('right');
   useEffect(() => {
-    if (rightContainer) {
-      rightContainer.scrollTop = 0;
-    }
+    // reset scroll of right container
+    document.getElementById('project-right').scrollTop = 0;
   });
 
   return (

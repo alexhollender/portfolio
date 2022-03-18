@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
 import { useOutletContext } from "react-router-dom";
-import { Link } from "react-router-dom";
-import ProjectHeader from "./ProjectHeader";
 import Nav from "./Nav";
 import Picture from "./Picture";
 import ProjectContent from "./ProjectContent";
@@ -11,12 +8,6 @@ const Project = () => {
   // get projectPath from outlet context (i.e. props)
   const projectPath = useOutletContext();
   console.log(`Project: ${projectPath}`);
-
-  // when component mounts & updates
-  useEffect(() => {
-    // reset scroll of right container
-    document.getElementById('project-right').scrollTop = 0;
-  });
 
   return (
     <div id="project-wrapper" className={projectPath && "project-active"}>
