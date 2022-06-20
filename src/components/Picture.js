@@ -8,6 +8,7 @@ class Picture extends React.Component {
     super(props);
     this.createImageArray = this.createImageArray.bind(this);
     this.loadImagesToState = this.loadImagesToState.bind(this);
+    this.preloadImages = this.preloadImages.bind(this);
     this.nextImage = this.nextImage.bind(this);
     this.state = {
       count: 0,
@@ -30,6 +31,15 @@ class Picture extends React.Component {
         images: arr
       }
     });
+    this.preloadImages();
+  }
+
+  preloadImages = () => {
+    // preload images so there's no delay when going to next image
+    for (const element of this.state.images) {
+      var img = new Image();
+      img.src = element;
+    }
   }
 
   nextImage = () => {
