@@ -81,3 +81,23 @@
     }
   }
 }
+
+// mobile layout
+@media (max-width: 800px) {
+  #project-wrapper {
+    #project-left {
+      #project-nav {
+        padding: 150px 25px 50px 25px;
+        margin: 0 auto;
+        max-width: calc(100vw - 50px);
+      }
+    }
+    &.project-active {
+      #project-left { display: none; }
+      #project-right {
+        width: 100%;
+        #project-content { padding: 36px 25px 0 25px; }
+      }
+    }
+  }
+}

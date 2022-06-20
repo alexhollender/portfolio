@@ -15,7 +15,7 @@ const Header = ({ detail }) => {
 
       <Link to="/" onClick={scrollBackUp}>Alex Hollender</Link>
 
-      <div className="hide">you win some,<br/>you lose some</div>
+      <div className="tagline">you win some,<br/>you lose some</div>
 
       <NavLink to="aboutme">about me</NavLink>
 

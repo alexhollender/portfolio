@@ -31,17 +31,16 @@ header {
     &.active { text-decoration: underline;}
   }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
+  // when a project is open
   &.detail {
     a {
       color: #a5a5a5;
-      &:hover { color: black; } 
+      &:hover { color: black; }
     }
-    .hide { display: none; }
+    .tagline { display: none; }
   }
+}
+
+@media (max-width: 600px) {
+  .tagline { display: none; }
 }
